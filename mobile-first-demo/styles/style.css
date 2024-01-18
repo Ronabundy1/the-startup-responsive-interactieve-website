@@ -1,56 +1,61 @@
 :root {
-   --primary-color: #121212;
-   --Primary-color-Light: #ffffff;
-   --secondary-color: #0000ff;
-   --grey-i: #fafafa;
-   --grey-ii: #F1F4F4;
-   --grey-iii: #E7ECED;
-   --grey-iv: #282e30;
-   --grey-vi: #171717;
-   --error-color: #751500;
-   --success-color: #006049;
-   --solar-orange: #ff7300;
-   --grid-columns-desktop: 12;
-   --grid-rows-desktop: 6;
-   --grid-columns-mobile: 6;
-   --grid-rows-mobile: 6;
-   --headline-font: 'PP Formula', sans-serif;
-   --headline-font-weight: medium;
-   --headline-font-size: 80px;
-   --body-copy-font: 'PP Formula', sans-serif;
-   --body-copy-font-weight: medium;
-   --body-copy-font-size: 20px;
-   --body-copy-line-height: 36px;
- }
- 
+  --primary-color: #121212;
+  --Primary-color-Light: #ffffff;
+  --secondary-color: #0000ff;
+  --grey-i: #fafafa;
+  --grey-ii: #F1F4F4;
+  --grey-iii: #E7ECED;
+  --grey-iv: #282e30;
+  --grey-vi: #171717;
+  --error-color: #751500;
+  --success-color: #006049;
+  --solar-orange: #ff7300;
+  --grid-columns-desktop: 12;
+  --grid-rows-desktop: 6;
+  --grid-columns-mobile: 6;
+  --grid-rows-mobile: 6;
+  --headline-font: 'PP Formula', sans-serif;
+  --headline-font-weight: medium;
+  --headline-font-size: 80px;
+  --body-copy-font: 'PP Formula', sans-serif;
+  --body-copy-font-weight: medium;
+  --body-copy-font-size: 20px;
+  --body-copy-line-height: 36px;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: var(--body-copy-font);
   background-color: var(--Primary-color-Light);
+  
+  
 }
 
 header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 15px 20px;
   margin-bottom: 20px;
+  background: var(--grey-i);
+  background-size: cover;
+  position: relative;
 }
 
-
-.logo-container {
-  height: 50px; 
+.logo-container,
+.secondary-logo-container {
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  z-index: 2; /* Zorg ervoor dat het logo boven de achtergrondafbeelding wordt weergegeven */
 }
 
 .logo-container img,
 .secondary-logo-container img {
-  max-height: 100%; 
-  width: 100px; 
-  height: 100;
+  max-height: 100%;
+  width: auto; /* Pas dit aan indien nodig */
+  height: 100%;
 }
-
 
 .logo-container.primary-logo {
   order: -1;
@@ -62,22 +67,21 @@ nav a {
   padding: 10px 15px;
   margin: 0 10px;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-
 .logo-container.primary-logo {
-  order: -1; /* Move the primary logo to the left */
+  order: -1; 
 }
 
 .secondary-logo-container {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Move the secondary logo to the right */
+  justify-content: flex-end;
   flex-grow: 1; 
 }
 
@@ -85,93 +89,77 @@ nav a:hover {
   margin-right: 10px;
 }
 
-/* Font Awesome icons */
-.nav-icon i {
-  font-size: 2rem;
-  color: var(--solar-orange);
-  position: relative;
-  left: 1.5rem;
+.secondary-logo-container span {
+  color: #fff;
 }
 
 
-
-
- .secondary-logo-container span {
-   color: #fff;
- }
- 
- .slider-section {
-   display: grid;
- }
- 
- .grid-container {
+.grid-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  margin: 20px;
+  min-height: 600px;
+  max-width: 1200px; /* Pas de maximale breedte aan indien nodig */
+  width: 100%;
 }
 
- .slider-image {
-   width: 100%;
-   height: auto;
-   display: block;
-   border: 2px solid var(--solar-orange);
- }
- 
- #slider {
-   padding-top: 50px;
-   width: 100%;
-   height: auto;
-   overflow: hidden;
-   margin: 0 10px;
- }
- 
- #slider .slides {
-   display: flex;
-   width: 100%;
-   height: auto;
-   margin: 0;
-   padding: 0;
-   transition: transform 0.5s ease;
- }
- 
- #slider .slide {
-   flex: 0 0 100%;
-   width: 100%;
-   height: auto;
-   box-sizing: border-box;
-   padding: 0 15px;
- }
- 
- #slider img {
-   width: 100%;
-   height: auto;
-   display: block;
-   margin: 0 auto;
-   border: 2px solid var(--solar-orange);
- }
- 
- #slider .slide-content {
-   text-align: center;
-   padding-top: 20px;
- }
- 
- #slider-controls {
-   width: 100%;
-   text-align: center;
-   margin-top: 10px;
-   margin-left: 10px;
- }
- 
- #slider-controls ul {
-   list-style: none;
-   padding: 0;
-   margin: 0;
-   display: flex;
-   justify-content: center;
- }
- 
- #slider-controls li {
+
+
+#slider {
+  padding-top: 50px;
+  width: 60%;
+  height: 1200;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+
+#slider .slides {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease;
+}
+
+#slider .slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+#slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--solar-orange);
+}
+
+#slider .slide-content {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#slider-controls {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#slider-controls ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#slider-controls li {
   width: 10px;
   height: 5px;
   margin-right: 8px;
@@ -184,96 +172,126 @@ nav a:hover {
   background: var(--solar-orange);
 }
 
- #slider-controls .active-slide {
-   background: var(--solar-orange);
- }
- 
- .button-container {
-   display: flex;
-   justify-content: center;
-   margin-top: 20px;
- }
- 
- .contact-button,
- .product-button {
-   padding: 12px 20px;
-   font-size: 16px;
-   cursor: pointer;
-   background-color: var(--solar-orange);
-   color: #fff;
-   border: none;
-   border-radius: 5px;
-   transition: 0.3s ease;
-   
- }
- 
- .contact-button:hover,
- .product-button:hover {
-   background-color: #ff8c00;
- }
- 
- .carousel-container {
-   width: 80%;
-   overflow: hidden;
-   margin: 0 auto;
-   height: 300px; /* Adjust the height as needed */
- }
- 
- .carousel {
-   display: flex;
-   transition: transform 0.3s ease;
- }
- 
- .carousel-item {
-   flex: 0 0 20%; /* Set a fixed width for each item (adjust as needed) */
-   box-sizing: border-box;
-   position: relative;
- }
- 
- .carousel-item img {
-   width: 60px; 
-   height: auto; 
-   object-fit: contain; 
- }
- 
- .carousel-item h3,
- .carousel-item p {
-   margin-left: 5%;
- }
- 
- #prevBtn,
- #nextBtn {
-   cursor: pointer;
-   padding: 10px 15px;
-   font-size: 16px;
-   background-color: var(--solar-orange);
-   color: #fff;
-   border: none;
-   border-radius: 5px;
-   transition: 0.3s ease;
- }
- 
- #prevBtn:hover,
- #nextBtn:hover {
-   background-color: #ff8c00;
- }
+#slider-controls .active-slide {
+  background: var(--solar-orange);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-button,
+.product-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--solar-orange);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.contact-button:hover,
+.product-button:hover {
+  background-color: #ff8c00;
+}
+
+/* Voeg deze stijlen toe aan het einde van je bestaande CSS */
+
+.carousel-section {
+  background-color: var(--grey-ii);
+  padding: 40px 0;
+  margin-bottom: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  background-image: url('');
+}
+
+.product-slider__item img {
+  height: 150px; /
+  object-fit:cover;
+  width: 100%; 
+}
 
 
+.main-navigation, .bottom-navigation {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+.navigation-button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.product-slider {
+  align-items: flex-start;
+  background: #eee;
+  display: flex;
+  flex-flow: row wrap;
+  
+}
+
+.product-slider__item {
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+
+  .img {
+      border: 1px solid #000;
+      margin: 0 auto;
+  }
+  
+  &:hover {
+      background: rgba(0,0,0,.15);
+  }
+}
+
+.slick-arrow {
+  background: #97CC55;
+  border: 0;
+  color: #fff;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+  
  
- 
- @media only screen and (max-width: 600px) {
-   .carousel-item {
-     flex: 0 0 100%; 
-   }
- }
- 
- /* Media Query for Mobile */
- @media only screen and (min-width: 600px) {
-   .grid-container {
-     grid-template-columns: 1fr 1fr;
-   }
- }
- 
- 
- 
- 
+  
+@media only screen and (max-width: 600px) {
+  .carousel-item {
+    flex: 0 0 100%; 
+  }
+}
+
+/* Media Query voor mobiel */
+@media only screen and (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
