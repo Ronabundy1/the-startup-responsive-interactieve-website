@@ -94,20 +94,36 @@ nav a:hover {
 }
 
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  min-height: 600px;
-  max-width: 1200px; /* Pas de maximale breedte aan indien nodig */
-  width: 100%;
+.slider-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Set a minimum height to fill the viewport */
 }
 
+/* Additional styles for better appearance */
+.grid-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-content {
+  text-align: center;
+}
+
+.slider-content h2 {
+  font-size: 2em;
+}
+
+.slider-content p {
+  font-size: 1.5em;
+}
 
 
 #slider {
   padding-top: 50px;
-  width: 60%;
+  width: 80%;
   height: 1200;
   overflow: hidden;
   margin: 0 10px;
