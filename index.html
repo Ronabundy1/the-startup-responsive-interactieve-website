@@ -13,12 +13,12 @@
   <header>
     <nav>
       <div class="logo-container primary-logo">
-        <img src="Assets/02. Assets/Logo svg/Caelor-Logo.svg" alt="Caelor Logo">
+        <img src="Assets/02. Assets/Logo svg/Caelor-Logo.svg" alt="">
       </div>
       <div class="nav-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
     </nav>
     <div class="secondary-logo-container">
-      <img src="Assets/02. Assets/Logo svg/Caelor-Wordmark.svg" alt="Secundair Logo">
+      <img src="Assets/02. Assets/Logo svg/Caelor-Wordmark.svg" alt="">
     </div>
     
   </header>
@@ -46,8 +46,8 @@
               </li>
             </ul>
             <div class="button-container">
-              <button class="contact-button">Contact</button>
-              <button class="product-button">Products</button>
+              <button id="button-prev">Previous</button>
+              <button id="button-next">Next</button>
             </div>
             <div id="slider-controls">
               <ul>
@@ -63,64 +63,105 @@
 
     <div class="container">
       <div class="product-slider">
-          <div class="product-slider__category">
-              <h1>Apps</h1>
-              <p>Highly engaging, innovative, and user-friendly Jira and Confluence apps for technical and business teams. Optimize your internal processes, streamline your workflow, and power up your productivity by adding fun to the functionality of Atlassian products. Bring your team together, drive your business forward and make a happy workplace happen!
-                  </p>
-              <a href="#">See all products</a>
+        <div class="product-slider__category">
+          <button onclick="showJiraProducts()">Jira Products</button>
+          <button onclick="showConfluenceProducts()">Confluence Products</button>
+        </div>
+        <div class="product-slider__slider" id="productSlider">
+          <div class="product-slider__item jira">
+            <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Jira - Fields - App Icon.svg">
+            <h3>Example Jira Product 1</h3>
+            <small>Jira product description 1</small>
           </div>
-          <div class="product-slider__slider">
-              <div class="product-slider__item">
-                  <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Confluence - Cosmos - App Icon.svg">
-                  <h3>Cosmo</h3>
-                  <small></small>
-              </div>
-  
-              <div class="product-slider__item">
-                  <a href="">
-                  <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Confluence - Lingo - App Icon.svg">
-                  <h3>Lingo</h3>
-                  <small></small>
-                  </a>
-              </div>
-  
-              <div class="product-slider__item">
-                  <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Confluence - Optic - App Icon.svg">
-                  <h3>Optic</h3>
-                  <small></small>
-              </div>
-  
-              <div class="product-slider__item">
-                  <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Confluence - Pulse - App Icon.svg">
-                  <h3>Pulse</h3>
-                  <small></small>
-              </div>
-  
-              <div class="product-slider__item">
-                  <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Confluence - Trophies - App Icon.svg">
-                  <h3>Trophies</h3>
-                  <small></small>
-              </div>
-      
+    
+          <div class="product-slider__item jira">
+            <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Jira - Linksy - App Icon.svg">
+            <h3>Example Jira Product 2</h3>
+            <small>Jira product description 2</small>
+          </div>
+
+          <div class="product-slider__item jira">
+            <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Jira - Shoppie - App Icon.svg">
+            <h3>Example Jira Product 3</h3>
+            <small>Jira product description 3</small>
+          </div>
+    
+          <div class="product-slider__item confluence">
+            <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Jira - Trophies - App Icon.svg">
+            <h3>Example Confluence Product 1</h3>
+            <small>Confluence product description 1</small>
+          </div>
+    
+          <div class="product-slider__item confluence">
+            <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Confluence - Lingo - App Icon.svg">
+            <h3>Example Confluence Product 2</h3>
+            <small>Confluence product description 2</small>
+          </div>
+
+          <div class="product-slider__item confluence">
+            <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Confluence - Optic - App Icon.svg">
+            <h3>Example Confluence Product 3</h3>
+            <small>Confluence product description 3</small>
+          </div>
+
+          <div class="product-slider__item confluence">
+            <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Confluence - Pulse - App Icon.svg">
+            <h3>Example Confluence Product 4</h3>
+            <small>Confluence product description 4</small>
+          </div>
+
+          <div class="product-slider__item confluence">
+            <img src="Assets/02. Assets/Icons svg/Caelor-Logos_Confluence - Trophies - App Icon.svg">
+            <h3>Example Confluence Product 5</h3>
+            <small>Confluence product description 5</small>
+          </div>
+          
+
     
     <script defer src="script/main.js"></script>
   </main>
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-nav">
+
+    </div>
+  
+    <div class="footer-info">
+      <div class="info-section">
+        <h4>Book a Demo</h4>
+        <p>Learn everything you want to know about Caelor apps with a free demo. Our experts will show you how our apps allow you to optimize your work.</p>
+      </div>
+  
+      <div class="info-section">
+        <h4>Get in Touch</h4>
+        <p>Matrix Office Park, Slavonska avenija 1c<br> Zagreb 10000, Croatia (Hrvatska)<br>
+          <a href="mailto:marketplace@caelor.com">marketplace@caelor.com</a>
+        </p>
+      </div>
+  
+      <div class="info-section">
+        <h4>Links</h4>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Caelor Apps</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Use Case</a></li>
+          <li><a href="#">Documentation</a></li>
         </ul>
       </div>
-      <div class="footer-socials">
-        <ul>
-          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        </ul>
-      </div>
+    </div>
+  
+    <div class="footer-follow">
+      <h4>Follow Us On</h4>
+      <ul>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer-copyright">
+      <p>All rights reserved 2023 © Caelor Group d.o.o.</p>
+      <p><a href="#">EULA</a> | <a href="#">Privacy Policy</a></p>
     </div>
   </footer>
   
