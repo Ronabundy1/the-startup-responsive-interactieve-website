@@ -132,15 +132,6 @@ nav a:hover {
 }
 
 
-#slider {
-  padding-top: 50px;
-  width: 80%;
-  height: 1200;
-  overflow: hidden;
-  margin: 0 10px;
-}
-
-
 #slider .slides {
   display: flex;
   width: 100%;
@@ -171,29 +162,6 @@ nav a:hover {
   padding-top: 20px;
 }
 
-#slider-controls {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-#slider-controls ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-#slider-controls li {
-  width: 10px;
-  height: 5px;
-  margin-right: 8px;
-  border: 1px solid #ccc;
-  background: #ccc;
-  cursor: pointer;
-}
 
 #slider-controls .active-slide {
   background: var(--solar-orange);
@@ -227,6 +195,33 @@ nav a:hover {
   transform: scale(1.05); /* Added scale effect on hover */
 }
 
+#slider-controls {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#slider-controls ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#slider-controls li {
+  width: 10px;
+  height: 5px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  background: #ccc;
+  cursor: pointer;
+}
+
+#slider-controls .active-slide {
+  background: var(--solar-orange);
+}
 
 
 .carousel-section {
@@ -274,28 +269,6 @@ nav a:hover {
   transform: scale(1.05); /* effect */
 }
 
-#slider-controls {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-}
-
-#slider-controls ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-#slider-controls li {
-  width: 10px;
-  height: 5px;
-  margin-right: 8px;
-  border: 1px solid #ccc;
-  background: #ccc;
-  cursor: pointer;
-}
 
 #slider-controls .active-slide {
   background: var(--solar-orange);
